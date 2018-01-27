@@ -27,7 +27,7 @@ class CreateDemandCallback(object):
   def __init__(self, demands):
     self.demands = demands
 
-  def Demand(self, from_node, to_node):
+  def demand(self, from_node, to_node):
     return self.demands[from_node]
 
 def main():
@@ -56,7 +56,7 @@ def main():
 
     #Create the demand callback
     demands_at_nodes = CreateDemandCallback(demands)
-    demands_callback = demands_at_nodes.Demand
+    demands_callback = demands_at_nodes.demand
 
     #Add Dimension for demand to routing model.
     slack_max = 0
